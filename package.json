@@ -1,0 +1,50 @@
+{
+  "name": "@feldm/material-design-components",
+  "version": "1.0.0",
+  "description": "Material Design 3 web components library with customizable theming",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./components/*": "./src/components/*.js",
+    "./utils/*": "./src/utils/*.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "material-design",
+    "material-you",
+    "web-components",
+    "custom-elements",
+    "material-3",
+    "md3",
+    "design-system",
+    "ui-components"
+  ],
+  "author": "feldm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/material-design-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/material-design-components/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/material-design-components#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.9.0"
+  }
+}

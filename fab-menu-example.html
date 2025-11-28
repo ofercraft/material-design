@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FAB Component</title>
+
+    <script type="module" src="md-fab-menu.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+    <style>
+        md-fab-menu {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+        }
+    </style>
+    <script type="module">
+        import { MaterialYouColorGenerator } from "./color_generator.js";
+
+        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const theme = new MaterialYouColorGenerator("#0095ff", { dark });
+        theme.applyToDocument();
+    </script>
+
+
+</head>
+
+<body>
+
+<md-fab-menu>
+    <button icon="description">Document</button>
+    <button icon="grid_on">Table</button>
+    <button icon="slideshow">Presentation</button>
+</md-fab-menu>
+<script>
+document.addEventListener("fabmenu:select", e => {
+    console.log("Selected icon:", e.detail.icon);
+});
+</script>
+
+</body>
+</html>

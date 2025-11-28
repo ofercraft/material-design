@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="module" src="md-button.js"></script>
+    <script type="module" src="color_generator.js"></script>
+
+    <style>
+        body {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            margin-bottom: 4px;
+        }
+    </style>
+
+    <script type="module">
+        import { MaterialYouColorGenerator } from "./color_generator.js";
+
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const theme = new MaterialYouColorGenerator("#d930ff", {
+            dark: systemDark
+        });
+
+        theme.applyToDocument();
+    </script>
+
+</head>
+
+<body>
+
+<h2>Filled</h2>
+<section>
+    <md-button size="extra-small">XS</md-button>
+    <md-button size="small">Small</md-button>
+    <md-button size="medium">Medium</md-button>
+    <md-button size="large">Large</md-button>
+    <md-button size="extra-large">Extra Large</md-button>
+</section>
+
+<h2>Tonal</h2>
+<section>
+    <md-button type="tonal" size="small">Tonal</md-button>
+</section>
+
+<h2>Outlined</h2>
+<section>
+    <md-button type="outlined">Outlined</md-button>
+</section>
+
+<h2>Text</h2>
+<section>
+    <md-button type="text">Text button</md-button>
+</section>
+
+<h2>Elevated</h2>
+<section>
+    <md-button type="elevated">Elevated</md-button>
+</section>
+
+<h2>Toggle</h2>
+<section>
+    <md-button type="toggle">Toggle me</md-button>
+</section>
+
+<h2>Shapes</h2>
+<section>
+    <md-button shape="round">Round</md-button>
+    <md-button shape="square">Square</md-button>
+</section>
+
+<h2>With Icon</h2>
+<section>
+    <md-button>
+        <span slot="icon">mail</span>
+        Email
+    </md-button>
+</section>
+
+</body>
+</html>

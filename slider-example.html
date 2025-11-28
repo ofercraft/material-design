@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MD Slider Example</title>
+
+    <script type="module" src="md-slider.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            display: flex;
+            gap: 60px;
+            background: var(--color-background, #f8f3ff);
+            color: var(--color-on-background, #1c1b1f);
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .vertical-example {
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        md-slider {
+            margin-top: 10px;
+        }
+
+
+    </style>
+
+    <!-- OPTIONAL: auto Material-You theme -->
+    <script type="module">
+        import { MaterialYouColorGenerator } from "./color_generator.js";
+
+        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const theme = new MaterialYouColorGenerator("#0095ff", { dark });
+        theme.applyToDocument();
+    </script>
+</head>
+
+<body>
+
+    <!-- HORIZONTAL SLIDERS -->
+    <div class="section">
+        <div class="title">Horizontal Sliders</div>
+
+        <div>
+            Default:
+            <md-slider value="50"></md-slider>
+        </div>
+
+    </div>
+
+    <!-- VERTICAL SLIDERS -->
+    <div class="section">
+        <div class="title">Vertical Sliders</div>
+
+        <div class="vertical-example">
+            <md-slider vertical value="40"
+                style="--slider-width: 240px;">
+            </md-slider>
+        </div>
+
+    </div>
+
+</body>
+</html>

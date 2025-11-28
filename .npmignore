@@ -1,0 +1,14 @@
+# Test files
+*.test.js
+*.spec.js
+
+# Example files
+*-example.html
+
+# Development files
+.vscode/
+.idea/
+
+# Config files for development only
+.eslintrc*
+.prettierrc*

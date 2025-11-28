@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design Components - Demo</title>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1, h2 {
+      color: var(--color-on-background);
+    }
+    
+    .section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--color-surface);
+      border-radius: 12px;
+    }
+    
+    .demo-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+      align-items: center;
+    }
+    
+    .slider-container {
+      width: 300px;
+    }
+    
+    .value-display {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--color-secondary-container);
+      border-radius: 8px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <h1>Material Design 3 Components Demo</h1>
+  
+  <div class="section">
+    <h2>Buttons</h2>
+    
+    <div class="demo-row">
+      <md-button type="filled">Filled</md-button>
+      <md-button type="tonal">Tonal</md-button>
+      <md-button type="outlined">Outlined</md-button>
+      <md-button type="elevated">Elevated</md-button>
+      <md-button type="text">Text</md-button>
+    </div>
+    
+    <h3>With Icons</h3>
+    <div class="demo-row">
+      <md-button type="filled">
+        <span slot="icon">favorite</span>
+        Like
+      </md-button>
+      <md-button type="tonal">
+        <span slot="icon">share</span>
+        Share
+      </md-button>
+      <md-button type="outlined">
+        <span slot="icon">download</span>
+        Download
+      </md-button>
+    </div>
+    
+    <h3>Sizes</h3>
+    <div class="demo-row">
+      <md-button size="extra-small">Extra Small</md-button>
+      <md-button size="small">Small</md-button>
+      <md-button>Default</md-button>
+      <md-button size="medium">Medium</md-button>
+      <md-button size="large">Large</md-button>
+    </div>
+    
+    <h3>Toggle Button</h3>
+    <div class="demo-row">
+      <md-button type="toggle">Toggle Me</md-button>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Floating Action Buttons</h2>
+    
+    <div class="demo-row">
+      <md-fab icon="add" size="small"></md-fab>
+      <md-fab icon="edit" size="medium"></md-fab>
+      <md-fab icon="navigation" size="large"></md-fab>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Sliders</h2>
+    
+    <h3>Horizontal Slider</h3>
+    <div class="demo-row">
+      <div class="slider-container">
+        <md-slider id="slider1" min="0" max="100" value="50"></md-slider>
+      </div>
+      <span class="value-display" id="slider1-value">50</span>
+    </div>
+    
+    <h3>Vertical Slider</h3>
+    <div class="demo-row">
+      <md-slider id="slider2" min="0" max="100" value="75" vertical></md-slider>
+      <span class="value-display" id="slider2-value">75</span>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>FAB Menu</h2>
+    <md-fab-menu fab-icon="menu">
+      <button icon="share">Share</button>
+      <button icon="print">Print</button>
+      <button icon="save">Save</button>
+      <button icon="download">Download</button>
+    </md-fab-menu>
+  </div>
+
+  <script type="module">
+    // Import components from the source files
+    import './src/index.js';
+    import { MaterialYouColorGenerator } from './src/utils/color_generator.js';
+    
+    // Apply Material You theme
+    const theme = new MaterialYouColorGenerator('#6750A4', { dark: false });
+    theme.applyToDocument();
+    
+    // Slider value updates
+    const slider1 = document.getElementById('slider1');
+    const slider1Value = document.getElementById('slider1-value');
+    const slider2 = document.getElementById('slider2');
+    const slider2Value = document.getElementById('slider2-value');
+    
+    slider1.addEventListener('input', (e) => {
+      slider1Value.textContent = Math.round(slider1.value);
+    });
+    
+    slider2.addEventListener('input', (e) => {
+      slider2Value.textContent = Math.round(slider2.value);
+    });
+    
+    // FAB Menu events
+    document.querySelector('md-fab-menu').addEventListener('fabmenu:select', (e) => {
+      alert(`You selected: ${e.detail.icon}`);
+    });
+    
+    console.log('✅ Material Design Components loaded successfully!');
+  </script>
+</body>
+</html>

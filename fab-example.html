@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FAB Example</title>
+
+    <!-- FAB Component -->
+    <script type="module" src="md-fab.js"></script>
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+    <style>
+        /* Placement for the FABs in this demo */
+        .fab-column {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    </style>
+
+    <script type="module">
+        import { MaterialYouColorGenerator } from "./color_generator.js";
+
+        const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function applyTheme() {
+            const theme = new MaterialYouColorGenerator("#d930ff", {
+                dark: media.matches
+            });
+            theme.applyToDocument();
+        }
+
+        // Initial theme
+        applyTheme();
+
+        // Auto-update theme
+        media.addEventListener("change", applyTheme);
+    </script>
+
+</head>
+
+<body>
+
+<div class="fab-column">
+    <md-fab size="small" icon="add"></md-fab>
+    <md-fab size="medium" icon="edit"></md-fab>
+    <md-fab size="large" icon="brush"></md-fab>
+</div>
+
+</body>
+</html>
