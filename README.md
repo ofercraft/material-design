@@ -33,8 +33,8 @@ npm install @ofercraft/material-design
 import '@ofercraft/material-design';
 
 // Or import specific components
-import '@feldm/material-design-components/components/md-button.js';
-import '@feldm/material-design-components/components/md-fab.js';
+import '@ofercraft/material-design/components/md-button.js';
+import '@ofercraft/material-design/components/md-fab.js';
 
 // Import color generator utility
 import { MaterialYouColorGenerator } from '@ofercraft/material-design';
@@ -221,4 +221,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-feldm
+ofercraft
