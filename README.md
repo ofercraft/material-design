@@ -21,7 +21,7 @@ A lightweight, modern Material Design 3 (Material You) web components library bu
 ## Installation
 
 ```bash
-npm install @feldm/material-design-components
+npm install @ofercraft/material-design
 ```
 
 ## Usage
@@ -30,14 +30,14 @@ npm install @feldm/material-design-components
 
 ```javascript
 // Import all components
-import '@feldm/material-design-components';
+import '@ofercraft/material-design';
 
 // Or import specific components
 import '@feldm/material-design-components/components/md-button.js';
 import '@feldm/material-design-components/components/md-fab.js';
 
 // Import color generator utility
-import { MaterialYouColorGenerator } from '@feldm/material-design-components';
+import { MaterialYouColorGenerator } from '@ofercraft/material-design';
 
 // Apply custom theme
 const colorGen = new MaterialYouColorGenerator('#6750A4', { dark: false });
@@ -51,7 +51,7 @@ colorGen.applyToDocument();
 <html>
 <head>
   <script type="module">
-    import 'https://unpkg.com/@feldm/material-design-components/dist/index.esm.js';
+    import 'https://unpkg.com/@ofercraft/material-design/dist/index.esm.js';
   </script>
 </head>
 <body>
@@ -153,7 +153,7 @@ slider.addEventListener('change', (e) => {
 The package includes a Material You color generator that creates complete color schemes from a seed color:
 
 ```javascript
-import { MaterialYouColorGenerator } from '@feldm/material-design-components';
+import { MaterialYouColorGenerator } from '@ofercraft/material-design';
 
 // Create a light theme
 const lightTheme = new MaterialYouColorGenerator('#6750A4', { dark: false });
