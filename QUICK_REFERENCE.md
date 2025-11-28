@@ -92,18 +92,18 @@ material_design/
 
 ### From npm (after publishing)
 ```bash
-npm install @YOUR_USERNAME/material-design-components
+npm install @ofercraft/material-design
 ```
 
 ### From GitHub
 ```bash
-npm install github:YOUR_USERNAME/material-design-components
+npm install github:ofercraft/material-design
 ```
 
 ### Direct in HTML
 ```html
 <script type="module">
-  import 'https://unpkg.com/@YOUR_USERNAME/material-design-components';
+  import 'https://unpkg.com/@ofercraft/material-design';
 </script>
 ```
 
@@ -113,7 +113,7 @@ npm install github:YOUR_USERNAME/material-design-components
 
 ### JavaScript
 ```javascript
-import { MaterialYouColorGenerator } from '@YOUR_USERNAME/material-design-components';
+import { MaterialYouColorGenerator } from '@ofercraft/material-design';
 
 const theme = new MaterialYouColorGenerator('#6750A4', { dark: false });
 theme.applyToDocument();
@@ -157,9 +157,9 @@ git push && git push --tags
 
 After setup, your package will be available at:
 
-- **GitHub**: `https://github.com/YOUR_USERNAME/material-design-components`
-- **npm**: `https://www.npmjs.com/package/@YOUR_USERNAME/material-design-components`
-- **unpkg CDN**: `https://unpkg.com/@YOUR_USERNAME/material-design-components`
+- **GitHub**: `https://github.com/ofercraft/material-design`
+- **npm**: `https://www.npmjs.com/package/@ofercraft/material-design`
+- **unpkg CDN**: `https://unpkg.com/@ofercraft/material-design`
 
 ---
 
@@ -179,7 +179,7 @@ After setup, your package will be available at:
 ## 🆘 Common Issues
 
 **Problem**: Package name already exists  
-**Solution**: Use scoped package `@YOUR_USERNAME/package-name`
+**Solution**: Use scoped package `@ofercraft/material-design`
 
 **Problem**: Build fails  
 **Solution**: Run `npm install` to ensure dependencies are installed

@@ -1,5 +1,5 @@
 {
-  "name": "@feldm/material-design-components",
+  "name": "@ofercraft/material-design",
   "version": "1.0.0",
   "description": "Material Design 3 web components library with customizable theming",
   "main": "dist/index.js",
@@ -33,16 +33,16 @@
     "design-system",
     "ui-components"
   ],
-  "author": "feldm",
+  "author": "ofer feldman",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/material-design-components.git"
+    "url": "git+https://github.com/ofercraft/material-design.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/material-design-components/issues"
+    "url": "https://github.com/ofercraft/material-design/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/material-design-components#readme",
+  "homepage": "https://github.com/ofercraft/material-design#readme",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "rollup": "^4.9.0"
